@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Modern Wedding Invitation</title>
+
+  <!-- GOOGLE FONT -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+  rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+
+      font-family:'Poppins',sans-serif;
+
+      background:
+      linear-gradient(rgba(255,255,255,0.85),rgba(255,240,245,0.9)),
+      url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1974&auto=format&fit=crop');
+
+      background-size:cover;
+      background-position:center;
+
+      color:#333;
+
+      overflow-x:hidden;
+    }
+
+    /* HERO */
+
+    .hero{
+
+      min-height:100vh;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      padding:20px;
+
+      position:relative;
+    }
+
+    /* DECORATION */
+
+    .flower-left,
+    .flower-right{
+
+      position:absolute;
+
+      width:230px;
+      height:230px;
+
+      border-radius:50%;
+
+      overflow:hidden;
+
+      border:5px solid rgba(255,255,255,0.7);
+
+      box-shadow:0 0 30px rgba(255,182,193,0.4);
+    }
+
+    .flower-left{
+
+      top:40px;
+      left:40px;
+
+      background:
+      url('https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=1974&auto=format&fit=crop');
+
+      background-size:cover;
+      background-position:center;
+    }
+
+    .flower-right{
+
+      bottom:40px;
+      right:40px;
+
+      background:
+      url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1974&auto=format&fit=crop');
+
+      background-size:cover;
+      background-position:center;
+    }
+
+    .hero-content{
+
+      background:rgba(255,255,255,0.35);
+
+      backdrop-filter:blur(10px);
+
+      padding:55px;
+
+      border-radius:30px;
+
+      text-align:center;
+
+      max-width:700px;
+
+      animation:fadeUp 1s ease;
+
+      border:1px solid rgba(255,255,255,0.5);
+    }
+
+    .hero-content h1{
+
+      font-size:4rem;
+
+      color:#c94f7c;
+
+      margin-bottom:20px;
+    }
+
+    .hero-content h2{
+
+      color:#6b8e73;
+
+      margin-bottom:25px;
+
+      font-weight:500;
+    }
+
+    .hero-content p{
+
+      line-height:1.9;
+
+      color:#555;
+
+      font-size:1.05rem;
+    }
+
+    /* SECTION */
+
+    section{
+      padding:90px 10%;
+    }
+
+    .title{
+
+      text-align:center;
+
+      font-size:2.7rem;
+
+      margin-bottom:55px;
+
+      color:#c94f7c;
+    }
+
+    /* COUNTDOWN */
+
+    .countdown{
+
+      display:flex;
+
+      justify-content:center;
+
+      gap:25px;
+
+      flex-wrap:wrap;
+    }
+
+    .count-box{
+
+      background:rgba(255,255,255,0.55);
+
+      padding:25px;
+
+      width:130px;
+
+      border-radius:20px;
+
+      text-align:center;
+
+      backdrop-filter:blur(8px);
+
+      border:1px solid rgba(255,255,255,0.7);
+
+      transition:0.3s;
+    }
+
+    .count-box:hover{
+      transform:translateY(-8px);
+    }
+
+    .count-box h2{
+
+      color:#6b8e73;
+
+      font-size:2.3rem;
+    }
+
+    /* EVENTS */
+
+    .events{
+
+      display:grid;
+
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+      gap:25px;
+    }
+
+    .event-card{
+
+      background:rgba(255,255,255,0.5);
+
+      padding:30px;
+
+      border-radius:25px;
+
+      backdrop-filter:blur(10px);
+
+      border:1px solid rgba(255,255,255,0.6);
+
+      transition:0.3s;
+    }
+
+    .event-card:hover{
+
+      transform:translateY(-10px);
+
+      box-shadow:0 0 20px rgba(255,182,193,0.25);
+    }
+
+    .event-card h3{
+
+      color:#c94f7c;
+
+      margin-bottom:15px;
+    }
+
+    .event-card p{
+
+      line-height:1.8;
+
+      color:#555;
+    }
+
+    /* RSVP */
+
+    .form-section{
+
+      max-width:520px;
+
+      margin:auto;
+
+      background:rgba(255,255,255,0.5);
+
+      padding:40px;
+
+      border-radius:30px;
+
+      backdrop-filter:blur(10px);
+
+      border:1px solid rgba(255,255,255,0.6);
+    }
+
+    .form-section input{
+
+      width:100%;
+
+      padding:15px;
+
+      margin:12px 0;
+
+      border:none;
+
+      border-radius:12px;
+
+      outline:none;
+
+      font-size:1rem;
+    }
+
+    .form-section button{
+
+      width:100%;
+
+      padding:15px;
+
+      border:none;
+
+      border-radius:30px;
+
+      background:#c94f7c;
+
+      color:white;
+
+      font-weight:600;
+
+      cursor:pointer;
+
+      transition:0.3s;
+    }
+
+    .form-section button:hover{
+
+      transform:scale(1.03);
+
+      background:#b03f69;
+    }
+
+    /* THANK YOU */
+
+    .thankyou{
+
+      display:none;
+
+      margin-top:25px;
+
+      padding:20px;
+
+      border-radius:15px;
+
+      background:rgba(107,142,115,0.15);
+
+      text-align:center;
+
+      line-height:1.8;
+    }
+
+    .thankyou h3{
+
+      color:#6b8e73;
+
+      margin-bottom:10px;
+    }
+
+    /* FOOTER */
+
+    footer{
+
+      text-align:center;
+
+      padding:30px;
+
+      background:rgba(255,255,255,0.4);
+
+      color:#555;
+    }
+
+    /* ANIMATION */
+
+    @keyframes fadeUp{
+
+      from{
+        opacity:0;
+        transform:translateY(50px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    /* MOBILE */
+
+    @media(max-width:768px){
+
+      .hero-content h1{
+        font-size:2.6rem;
+      }
+
+      .flower-left,
+      .flower-right{
+
+        width:130px;
+        height:130px;
+      }
+
+      .hero-content{
+        padding:35px;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- HERO -->
+
+  <div class="hero">
+
+    <!-- LEFT IMAGE -->
+
+    <div class="flower-left"></div>
+
+    <!-- RIGHT IMAGE -->
+
+    <div class="flower-right"></div>
+
+    <div class="hero-content">
+
+      <h1>
+        Wedding Invitation
+      </h1>
+
+      <h2>
+        Together With Our Families, We Welcome You
+      </h2>
+
+      <p>
+        Join us for a beautiful celebration filled with love,
+        joy, blessings, and unforgettable memories as we begin
+        our forever journey together 💍
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- COUNTDOWN -->
+
+  <section>
+
+    <h2 class="title">
+      Countdown To Wedding
+    </h2>
+
+    <div class="countdown">
+
+      <div class="count-box">
+
+        <h2 id="days">00</h2>
+
+        <p>Days</p>
+
+      </div>
+
+      <div class="count-box">
+
+        <h2 id="hours">00</h2>
+
+        <p>Hours</p>
+
+      </div>
+
+      <div class="count-box">
+
+        <h2 id="minutes">00</h2>
+
+        <p>Minutes</p>
+
+      </div>
+
+      <div class="count-box">
+
+        <h2 id="seconds">00</h2>
+
+        <p>Seconds</p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- EVENTS -->
+
+  <section>
+
+    <h2 class="title">
+      Wedding Events
+    </h2>
+
+    <div class="events">
+
+      <div class="event-card">
+
+        <h3>💚 Engagement</h3>
+
+        <p>
+          Date: 20 December 2026 <br>
+          Time: 11:00 AM <br><br>
+
+          Please arrive 15 minutes early.
+        </p>
+
+      </div>
+
+      <div class="event-card">
+
+        <h3>❤️ Wedding Ceremony</h3>
+
+        <p>
+          Date: 21 December 2026 <br>
+          Time: 6:00 PM <br><br>
+
+          Traditional rituals followed by dinner.
+        </p>
+
+      </div>
+
+      <div class="event-card">
+
+        <h3>🌸 Reception</h3>
+
+        <p>
+          Date: 22 December 2026 <br>
+          Time: 8:00 PM <br><br>
+
+          Celebrate the evening with music & joy.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- RSVP -->
+
+  <section>
+
+    <h2 class="title">
+      RSVP Confirmation
+    </h2>
+
+    <div class="form-section">
+
+      <input type="text"
+      id="name"
+      placeholder="Enter Your Name">
+
+      <input type="number"
+      id="members"
+      placeholder="How Many Members Will Attend?">
+
+      <button onclick="submitForm()">
+        Confirm Attendance
+      </button>
+
+      <!-- THANK YOU -->
+
+      <div class="thankyou" id="thankyou">
+
+        <h3>
+          Thank You 💖
+        </h3>
+
+        <p id="message"></p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    Crafted With Love ✨ <br>
+    Wedding Celebration 2026
+
+  </footer>
+
+  <!-- SCRIPT -->
+
+  <script>
+
+    /* COUNTDOWN */
+
+    const weddingDate =
+    new Date("Dec 21, 2026 18:00:00").getTime();
+
+    setInterval(()=>{
+
+      const now = new Date().getTime();
+
+      const gap = weddingDate - now;
+
+      const days =
+      Math.floor(gap/(1000*60*60*24));
+
+      const hours =
+      Math.floor((gap%(1000*60*60*24))/(1000*60*60));
+
+      const minutes =
+      Math.floor((gap%(1000*60*60))/(1000*60));
+
+      const seconds =
+      Math.floor((gap%(1000*60))/1000);
+
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours;
+      document.getElementById("minutes").innerText = minutes;
+      document.getElementById("seconds").innerText = seconds;
+
+    },1000);
+
+    /* RSVP */
+
+    function submitForm(){
+
+      const name =
+      document.getElementById("name").value;
+
+      const members =
+      document.getElementById("members").value;
+
+      if(name === "" || members === ""){
+
+        alert("Please fill all details");
+        return;
+      }
+
+      document.getElementById("thankyou").style.display =
+      "block";
+
+      document.getElementById("message").innerHTML =
+
+      "Dear <b>" + name + "</b>, <br><br>" +
+
+      "Thank you for your lovely response 💖 <br>" +
+
+      "We are excited to welcome <b>" + members +
+
+      "</b> members to our wedding celebration ✨ <br><br>" +
+
+      "Your presence and blessings truly mean a lot to us.";
+
+      document.getElementById("name").value = "";
+      document.getElementById("members").value = "";
+    }
+
+  </script>
+
+</body>
+
+</html>
